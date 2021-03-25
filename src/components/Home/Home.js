@@ -4,6 +4,7 @@ import './Home.css';
 import london from './london.jpg';
 import dubai from './dubai.jpg';
 import newyork from './newyork.jpg';
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -17,21 +18,20 @@ const Home = () => {
                             Travel the World with us. 
                         </p>
                         <p>
-                            Book a flight right now in 
+                            Book a flight right now!
                         </p>
-                        <p>
-                        just a few clicks!
-                        </p>
-                        <button>Book a flight</button>
+                        <Link to="/bookflights"><button className='button'><span>Book a flight</span></button></Link>
                     </div>
                 </div>
+                <div className='fade'></div>
             </div>
-            <h2>Amazing prices for some of the most popular destinations.</h2>
+            <h2>Popular destinations</h2>
             <section className = "pop-flights">
-                <div><img src = {london} /></div>
-                <div><img src = {dubai} /></div>
-                <div><img src = {newyork} /></div>
+                <article><img src = {london} /><p>London</p></article>
+                <article><img src = {dubai} /><p>Dubai</p></article>
+                <article><img src = {newyork} /><p>New York</p></article>
             </section>
+            <p style={{textAlign: 'center',padding:'20px',backgroundColor:'#eee'}}><a href=''>Fran Marić</a> & <a href=''>Jelena Hrga</a> © FrontEd Hackathon 2021</p>
         </div>
     )
 }

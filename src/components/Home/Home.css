@@ -4,6 +4,19 @@
   width: 100%;
   background-size: cover;
 }
+.fade {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  height: 100px;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 
 .wrapper {
   display: flex;
@@ -24,28 +37,83 @@
   color: white;
 }
 
-.intro button {
-  margin-top: 4vh;
+.button {
+  border-radius: 4px;
   background-color: white;
-  padding: 13px;
   border: none;
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
   cursor: pointer;
-  outline: none;
-  font: inherit;
-  font-size: 1.3em;
+  margin: 5px;
+  margin-top: 10px;
+  width: auto;
+  border-radius: 10px;
 }
 
-h2 {
-  margin: 0 auto;
-  text-align: center;
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .pop-flights {
   display: flex;
-  justify-content: space-evenly;
+}
+
+article {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  margin: 50px;
+  padding: 10px;
+}
+
+article p {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: white;
+  font-size: large;
 }
 
 .pop-flights img {
-  max-width: 30vw;
-  border-radius: 5%;
+  max-width: 25vw;
+  border-radius: 21px;
+}
+
+.homeContainer h2 {
+  position: absolute;
+  left: 70px;
+  margin-top: 10px;
+}
+
+article {
+  transition: transform 0.2s;
+}
+.pop-flights article:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
