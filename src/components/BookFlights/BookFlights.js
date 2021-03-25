@@ -78,7 +78,8 @@ const BookFlights = () => {
   };
 
   return (
-    <div>
+    <div className='homeContainer'>
+      <div className='fade'></div>
       <Nav></Nav>
       <div className='book-flight'>
       <form onSubmit={getSearch}>

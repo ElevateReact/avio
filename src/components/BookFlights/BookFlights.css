@@ -1,13 +1,29 @@
+.homeContainer {
+  background-image: url("../Home/bg.jpg");
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+}
+.fade {
+  position: absolute;
+  bottom: 0px;
+
+  width: 100%;
+  height: 100px;
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 1) 100%
+  );
+}
 * {
   box-sizing: border-box;
 }
 body {
   font: 16px Arial;
 }
-.autocomplete {
-  position: relative;
-  display: inline-block;
-}
+
 input {
   border: 1px solid transparent;
   background-color: #f1f1f1;

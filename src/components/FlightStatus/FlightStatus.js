@@ -3,7 +3,8 @@ import Nav from '../Nav/Nav';
 
 const FlightStatus = () => {
     return (
-        <div>
+        <div className='homeContainer'>
+            <div className='fade'></div>
             <Nav></Nav>
         </div>
     )
