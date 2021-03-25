@@ -112,7 +112,7 @@ const BookFlights = () => {
                     currency = {flight.currency}
                     oneway = {flight.oneway}
                     departureTime = {flight.departureTime}
-                    arrival = {flight.arrival}
+                    arrivalTime = {flight.arrivalTime}
                     carrier = {flight.carrier}
                     aircraft = {flight.aircraft}
                 />
