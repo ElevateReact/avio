@@ -31,7 +31,7 @@ const Home = () => {
                 <article><img src = {dubai} /><p>Dubai</p></article>
                 <article><img src = {newyork} /><p>New York</p></article>
             </section>
-            <p style={{textAlign: 'center',padding:'20px',backgroundColor:'#eee'}}><a href=''>Fran Marić</a> & <a href=''>Jelena Hrga</a> © FrontEd Hackathon 2021</p>
+            <p style={{textAlign: 'center',padding:'20px',backgroundColor:'#eee'}}><a href='https://github.com/FranMaric'>Fran Marić</a> & <a href='https://github.com/yelle99'>Jelena Hrga</a> © FrontEd Hackathon 2021</p>
         </div>
     )
 }
