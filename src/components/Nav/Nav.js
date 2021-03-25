@@ -17,7 +17,7 @@ const Nav = () => {
         link.style.animation = "";
       } else {
         link.style.animation = `navLinkFade 0.5s ease forwards ${
-          index / 7 + 0.8
+          index / 7 + 0.3
         }s`;
       }
     });
@@ -29,7 +29,7 @@ const Nav = () => {
     <div>
       <nav>
         <div className="logo">
-          <h4>The Nav</h4>
+          <h4>LOGO</h4>
         </div>
         <ul className="nav-links">
           <li>

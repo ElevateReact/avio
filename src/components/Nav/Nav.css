@@ -9,21 +9,20 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 15vh;
-    background-color: #5D4954;
     font-family: 'Poppins', sans-serif;
 }
 
 .logo {
-    color: rgb(219, 219, 219);
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    color: rgb(219, 219, 219)
 }
 
 .nav-links {
     display: flex;
     justify-content: space-around;
-    width: 40%;
+    width: 50%;
 }
 
 .nav-links li {
@@ -34,8 +33,11 @@ nav {
     color: rgb(219, 219, 219);
     text-decoration: none;
     letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 1.3rem;
+}
+
+.nav-links a:hover {
+    border-bottom: 3px solid rgba(209, 61, 16, 0.8);
 }
 
 .burger {
@@ -46,14 +48,14 @@ nav {
 .burger div {
     width: 25px;
     height: 3px;
-    background-color: rgb(219, 219, 219);
+    background-color: white;
     margin: 5px;
     transition: all 0.3s ease;
 }
 
 @media screen and (max-width: 1100px){
     .nav-links {
-        width: 50%;
+        width: 70%;
     }
 }
 
@@ -65,9 +67,9 @@ nav {
     .nav-links {
         position: absolute;
         right: 0px;
-        height: 92vh;
-        top: 8vh;
-        background-color: #5D4954;
+        height: 100vh;
+        top: 0vh;
+        background-color: rgb(20, 19, 80);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -78,6 +80,7 @@ nav {
 
     .nav-links li {
         opacity: 0;
+        padding-top: 15vh;
     }
 
     .burger {

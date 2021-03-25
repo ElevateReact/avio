@@ -1,0 +1,50 @@
+.home {
+    background-image: url("bg.jpg");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: flex-start;
+    justify-items: flex-end;
+}
+
+.intro {
+    margin-right: 2vw;
+    margin-top: 15vh;
+    padding: 5%;
+}
+
+.intro p {
+    font-size: 2.8em;
+}
+
+.intro button {
+    margin-top: 4vh;
+    background-color: white;
+    padding: 13px;
+	border: none;
+	cursor: pointer;
+    outline: none;
+    font: inherit;
+    font-size: 1.3em;
+}
+
+h2 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.pop-flights {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pop-flights img {
+    max-width: 30vw;
+    border-radius: 5%;
+}
