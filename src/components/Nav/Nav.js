@@ -41,9 +41,6 @@ const Nav = () => {
           <li>
             <Link to="/flightstatus">Flight Status</Link>
           </li>
-          <li>
-            <Link to="/admin">Admin</Link>
-          </li>
         </ul>
 
         <div className="burger" onClick={navSlide}>
