@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Nav from "../Nav/Nav";
 import FlightTile from "../FlightTile/FlightTile";
-
+import './BookFlights.css';
 import token from "../../services/token";
 
 const BookFlights = () => {
@@ -80,18 +80,21 @@ const BookFlights = () => {
   return (
     <div>
       <Nav></Nav>
+      <div className='book-flight'>
       <form onSubmit={getSearch}>
         <input
           onChange={updateSearchFrom}
           className="from"
           value={searchFrom}
           type="text"
+          placeholder='From'
         ></input>
         <input
           onChange={updateSearchTo}
           value={searchTo}
           className="to"
           type="text"
+          placeholder='To'
         ></input>
         <input
           onChange={updateSearchDate}
@@ -118,6 +121,7 @@ const BookFlights = () => {
                 />
             ))}
           </ol>
+      </div>
       </div>
     </div>
   );

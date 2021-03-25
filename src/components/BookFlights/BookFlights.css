@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px Arial;
+}
+.autocomplete {
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+}
+input[type="text"],
+input[type="date"] {
+  background-color: #f1f1f1;
+  margin: 10px;
+  border-radius: 5px;
+}
+.search-button {
+  padding: 10px;
+  background-color: #f1f1f1;
+  margin: 10px;
+  border-radius: 5px;
+  border-color: #f1f1f1;
+}
+
+.book-flight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
