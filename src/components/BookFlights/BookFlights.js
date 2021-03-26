@@ -5,6 +5,7 @@ import './BookFlights.css';
 import token from "../../services/token";
 
 const BookFlights = () => {
+  const [suggestions, setSuggestions] = useState([]);
   const [flights, setFlights] = useState([]);
   const [searchFrom, setSearchFrom] = useState("");
   const [searchTo, setSearchTo] = useState("");
@@ -27,6 +28,35 @@ const BookFlights = () => {
     [queryTo],
     [queryDate]
   );
+
+  useEffect(() => {
+    if (isMounted.current && searchFrom.length > 1) {
+      getIata();
+    } else {
+      isMounted.current = true;
+    }
+  }, [searchFrom]);
+
+  const getIata = async () => {
+    const url = `https://test.api.amadeus.com/v1/reference-data/locations?subType=AIRPORT&keyword=${searchFrom}`;
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        authorization: `Bearer ${await token()}`,
+      },
+    });
+
+    const iata = await response.json();
+    console.log(iata);
+    let newSuggestions = [];
+    for (let i = 0; i < iata.data.length; i++) {
+      newSuggestions.push({
+        cityName: iata.data[i].address.cityName,
+        airportName: iata.data[i].name,
+      });
+    }
+    setSuggestions(newSuggestions);
+  };
 
   const getFlights = async () => {
     const url = `https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=${queryFrom}&destinationLocationCode=${queryTo}&departureDate=${queryDate}&adults=${2}`;
@@ -90,6 +120,13 @@ const BookFlights = () => {
           type="text"
           placeholder='From'
         ></input>
+        <div>
+          {suggestions.map((suggestion) => (
+            <div className="items">
+              {suggestion.airportName}, {suggestion.cityName}
+            </div>
+          ))}
+        </div>
         <input
           onChange={updateSearchTo}
           value={searchTo}

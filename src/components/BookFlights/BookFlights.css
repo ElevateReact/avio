@@ -49,3 +49,13 @@ input[type="date"] {
   flex-direction: column;
   align-items: center;
 }
+
+.items {
+  color: white;
+  padding: 5px;
+}
+
+.items:hover {
+  background-color: darkslateblue;
+  cursor: pointer;
+}
