@@ -161,7 +161,6 @@ const BookFlights = () => {
           </ol>
       </div>
       </div>
-      <p style={{textAlign: 'center',padding:'20px',backgroundColor:'#eee', position:'absolute', bottom:'-55px', width:'100%'}}><a href='https://github.com/FranMaric'>Fran Marić</a> & <a href='https://github.com/yelle99'>Jelena Hrga</a> © FrontEd Hackathon 2021</p>
     </div>
   );
 };
